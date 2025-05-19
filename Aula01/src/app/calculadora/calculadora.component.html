@@ -1,0 +1,19 @@
+<div class="container">
+   <div class="form-box">
+      <form #formy="ngForm" (ngSubmit)="calcularResultado()">
+         <h2>Calculadora</h2>
+         <label for="number1">Número 1</label>
+         <input type="number" name="number1" id="number1" [(ngModel)]="numero1">
+
+
+         <label for="number2">Número 2</label>
+         <input type="number" name="number2" id="number2" [(ngModel)]="numero2">
+
+         <button type="submit">Somar</button>
+      </form>
+
+      <div class="result-display" *ngIf="resultado">
+         <p>Resultado: <span id="result">{{resultado}}</span></p>
+      </div>
+   </div>
+</div>
